@@ -1,5 +1,5 @@
+from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render
-# from django.http import HttpResponse
-#
-# def index(request):
-#     return HttpResponse('Hello world')
+
+def index_view(request: HttpRequest) -> HttpResponse:
+    return render(request, 'polls/index.html')
