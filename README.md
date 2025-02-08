@@ -1,2 +1,2 @@
-# Hello World
-## now - method, which gave us ifoo abput the calendar date
+# Hello world it is my note about django
+### now - method, which gave us info about the calendar date
