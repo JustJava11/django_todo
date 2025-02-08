@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>
+        {% block title%}
+        Base title
+        {% endblock title %}
+    </title>
 </head>
 <body>
+{% include "components/nav.html" %}
+{% block body %}
+Base body
+{% endblock body %}
 
 </body>
+<footer>
+    <h3>&copy; By Java</h3>
+</footer>
 </html>
