@@ -35,6 +35,7 @@ class ToDoItemCreateView(CreateView):
 
 class ToDoItemUpdateView(UpdateView):
     model = ToDoItem
+    template_name_suffix = "_update_form"
     form_class = ToDoItemUpdateForm
      # fields = ('title',
     #           'description',
