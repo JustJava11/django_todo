@@ -1,0 +1,28 @@
+{% extends "polls/base.html" %}
+
+{% block title %}
+Todo #{{ object.pk }}
+{% endblock title %}
+
+{% block body %}
+<h3>ToDo</h3>
+<div>
+    <div> Title: <strong> {{ object.title }}</strong></div>
+    <div>Done: <strong> {{ object.done }}</strong></div>
+    <div>Description: <strong> {{ object.description }}</strong></div>
+</div>
+
+<div>
+    <ul>
+        <li>
+        <a href="{% url "polls:update" object.pk %}">
+        Update Todo Item</a>
+        </li>
+        <li>
+        <a href="{% url "polls:delete" object.pk %}">
+        Delete Todo Item</a>
+        </li>
+    </ul>
+</div>
+{% include "polls/components/todo_items_list.html" %}
+{% endblock body %}

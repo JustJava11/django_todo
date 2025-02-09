@@ -1,0 +1,14 @@
+{% extends "polls/base.html" %}
+
+{% block title %}
+Create View ToDo list
+{% endblock title %}
+
+{% block body %}
+<h3>Create new ToDo:</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Add">
+</form>
+{% endblock body %}
