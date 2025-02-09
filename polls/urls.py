@@ -8,6 +8,6 @@ urlpatterns = [
     #      TemplateView.as_view(template_name='polls/index.html'),
     #      name = 'index'
     # ),
-    path('', views.index_view, name='index')
+    path('', views.ToDoListIndexView.as_view(), name='index')
 ]
 
