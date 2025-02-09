@@ -9,19 +9,13 @@ from .models import ToDoItem
 #     todo_items = ToDoItem.objects.all()
 #     return render(request,
 #                   template_name='polls/index.html',
-#                   context={'todo_items': todo_items})
-#
-#
-class ToDoListIndexView(TemplateView):
+#                   context={'todo_items': todo_items[:3]})
+
+
+class ToDoListIndexView(ListView):
     template_name = 'polls/index.html'
+    queryset = ToDoItem.objects.all()[:5]
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['todo_items'] = ToDoItem.objects.all()
-        return context
 
-#
-# class ToDoListView(ListView):
-#     template_name = 'polls/index.html'
-#     model = ToDoItem
-#     context_object_name = 'todo_items'
+class ToDoListView(ListView):
+    model = ToDoItem

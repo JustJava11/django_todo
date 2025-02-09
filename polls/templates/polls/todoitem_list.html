@@ -1,12 +1,10 @@
 {% extends "polls/base.html" %}
 
 {% block title %}
-ToDo list
+    ToDo list
 {% endblock title %}
 
 {% block body %}
-<h1>ToDo List App</h1>
-<a href="{% url "polls:list" %}">All ToDo tasks</a>
-<h3>ToDos:</h3>
+    <h3>ToDos:</h3>
     {% include "polls/components/todo_items_list.html" %}
 {% endblock body %}
