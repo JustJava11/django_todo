@@ -2,9 +2,11 @@
 
 {% block title %}
 Main index page
-{% endblock title  %}
+{% endblock title %}
 
 {% block body %}
-<h1>Hello World</h1>
-<h2>Today is {% now "d.m.y" %}</h2>
+<div class="container text-center mt-5">
+    <h1 class="display-4">Hello World</h1>
+    <h2 class="text-muted">Today is {% now "d.m.y" %}</h2>
+</div>
 {% endblock body %}

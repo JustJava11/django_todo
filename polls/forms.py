@@ -7,7 +7,7 @@ class ToDoItemCreateForm(forms.ModelForm):
 
     class Meta:
         model = ToDoItem
-        fields = ('title', 'description')
+        fields = ('title', 'description', 'done')
 
         widgets = {
             'description': forms.Textarea(
